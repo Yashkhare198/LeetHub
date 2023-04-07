@@ -30,9 +30,10 @@ bool palind(string s){
         //code here
         
         if(palind(str)) return 0;
+        if(str.size()==1) return 0;
         
-        for(int i=str.size()-1;i>=0;i--){
-            if(palind(str.substr(0,i)))
+        for(int i=str.size()-1;i>0;i--){
+            if(str[0]==str[i-1]&& palind(str.substr(0,i)))
             {
                 return str.length()-i;
             }
