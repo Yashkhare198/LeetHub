@@ -12,8 +12,8 @@ public:
         vector<vector<int>>adj(n);
         for(int i=0;i<pre.size();i++){
            
-            adj[pre[i].first].push_back(pre[i].second);
-            indegree[pre[i].second]++;
+            adj[pre[i].second].push_back(pre[i].first);
+            indegree[pre[i].first]++;
            
         }
         
