@@ -24,12 +24,14 @@ class Solution {
             }
         }
         
-        vector<int>topo;
+        // vector<int>topo;
+        int cnt=0;
         
         while(!q.empty()){
             int node =q.front();
             q.pop();
-            topo.push_back(node);
+            // topo.push_back(node);
+            cnt++;
             
             for(auto x:adj[node]){
                 indegree[x]--;
@@ -39,7 +41,7 @@ class Solution {
             }
         }
         
-        if(topo.size()==V)return false;
+        if(cnt==V)return false;
         return true;
     }
 };
