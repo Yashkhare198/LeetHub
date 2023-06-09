@@ -9,6 +9,7 @@ class Solution
 		vector<string>find_permutation(string s)
 		{
 		    sort(s.begin(),s.end());
+		    
 		    set<string>st;
 		    
 		    st.insert(s);
